@@ -1,0 +1,145 @@
+.header {
+  position: relative;
+  height: 80vh;
+  background-image: url(../assets/HeroBackground.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+
+
+  overflow: hidden; /* make sure overlay stays inside */
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);  /* black with 50% opacity */
+  z-index: 1;  /* behind content */
+}
+
+/* Then make sure the content is above overlay: */
+.header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 600px;
+}
+
+
+/* Navbar is absolutely positioned over header */
+.header-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  background-color: transparent !important;
+  z-index: 1000;
+}
+
+/* Logo on left */
+.header-logo {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  user-select: none;
+}
+
+/* Nav links container */
+.header-nav-links {
+  margin-left: auto;
+font-size: 1.2rem;
+  gap: 1.5rem;
+}
+
+
+/* Nav links */
+.header-nav-link {
+  color: white !important;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+/* Nav links */
+.header-nav-link:hover {
+ color:#2bda51 !important
+}
+
+.header-nav-link:hover {
+  color: #28a745;
+}
+
+/* Hero content */
+.header-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Titles and button */
+.header-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.header-button {
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  background-color: #28a745;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.header-button:hover,
+.header-button:focus {
+  background-color: #218838;
+  box-shadow: none;
+  outline: none;
+}
+.cannabis-span{
+  color: #34dd59; 
+}
+
+
+
+
+/* =========================
+   MOBILE NAV DROPDOWN ONLY
+   ========================= */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 12px;
+  }
+}
+
+/* =========================
+   DESKTOP RESET (OPTIONAL)
+   ========================= */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    background: transparent;
+    padding: 0;
+  }
+}
+
+
