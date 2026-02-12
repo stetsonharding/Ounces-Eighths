@@ -1,0 +1,67 @@
+.pickup-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #0f1a12, #070d09 60%);
+  overflow: hidden;
+}
+/* ===== Blob Wrapper ===== */
+
+.blobs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* ===== Organic Cannabis Blobs ===== */
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.55;
+  animation: float 18s infinite ease-in-out alternate;
+}
+
+/* Deep emerald */
+
+.blob1 {
+  background: #14532d; /* forest green */
+  top: -150px;
+  left: -150px;
+}
+
+/* Bright cannabis green glow */
+
+.blob2 {
+  background: #4ade80; /* lime green */
+  bottom: -200px;
+  right: -150px;
+  animation-delay: 4s;
+}
+
+/* Dark moss tone */
+
+.blob3 {
+  background: #166534;
+  top: 40%;
+  left: 55%;
+  animation-delay: 8s;
+}
+
+/* Slower organic movement */
+
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  100% {
+    transform: translate(60px, -40px) scale(1.15);
+  }
+}
+

@@ -76,13 +76,13 @@
 
 .shop-btn {
   margin-top: 20px;
-  background: linear-gradient(90deg, #39b54a, #2fd965);
-  color: white;
+  background: linear-gradient(90deg, #16a34a, #4ade80);
+  color: #051b0c;
   border: none;
   padding: 14px 0;
   width: 80%;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -90,5 +90,6 @@
 
 .shop-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(57, 181, 74, 0.4);
+  box-shadow: 0 15px 35px rgba(74, 222, 128, 0.4);
 }
+
