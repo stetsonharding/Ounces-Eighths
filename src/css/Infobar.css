@@ -1,0 +1,35 @@
+.info-container {
+    background-color: black;
+    height: 170px;
+    display: flex;
+    align-items: center;
+}
+
+.hours-information {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+}
+
+.hours-text {
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+
+
+@media (max-width: 591.98px) {
+    .hours-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hours-text {
+        font-size: 1.2rem;
+    }
+
+}
