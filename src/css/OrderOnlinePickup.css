@@ -1,0 +1,98 @@
+.pickup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(
+      circle at 30% 20%,
+      rgba(57, 181, 74, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(0, 150, 255, 0.1),
+      transparent 40%
+    ),
+    linear-gradient(135deg, #0b0f14, #0f1720);
+}
+
+
+.pickup-card {
+  position: relative;
+  z-index: 2;
+  padding: 60px 60px;
+  width: 550px;
+  max-width: 90%;
+
+  background: rgba(20, 30, 22, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+
+  border: 1px solid rgba(132, 255, 0, 0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+
+  text-align: center;
+  color: white;
+}
+
+
+
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #aaa;
+  margin-bottom: 35px;
+}
+
+.map-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.map-image {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.map-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(57, 181, 74, 0.4);
+}
+
+.address {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #ccc;
+}
+
+.shop-btn {
+  margin-top: 20px;
+  background: linear-gradient(90deg, #16a34a, #4ade80);
+  color: #051b0c;
+  border: none;
+  padding: 14px 0;
+  width: 80%;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(74, 222, 128, 0.4);
+}
+

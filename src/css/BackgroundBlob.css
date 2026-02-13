@@ -1,0 +1,67 @@
+.pickup-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background: radial-gradient(circle at 20% 20%, #1a2e1f, transparent 40%),
+              radial-gradient(circle at 80% 70%, #0f3b1f, transparent 40%),
+              linear-gradient(135deg, #0c1510, #111a14 60%, #0e1411);
+}
+/* ===== Blob Base ===== */
+
+.blob {
+  position: absolute;
+  width: 320px;      /* smaller */
+  height: 320px;     /* smaller */
+  border-radius: 60% 40% 55% 45%;
+  filter: blur(90px);  /* slightly less blur so they don't look washed */
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+
+/* ===== Individual Blobs ===== */
+
+.blob1 {
+ background: radial-gradient(circle, #84ff00, #22c55e);
+  animation: moveBlob1 28s infinite linear;
+}
+
+.blob2 {
+  background: radial-gradient(circle, #c084fc, #7c3aed);
+  animation: moveBlob2 34s infinite linear;
+}
+
+.blob3 {
+ background: radial-gradient(circle, #a3ff5a, #16a34a);
+  animation: moveBlob3 40s infinite linear;
+}
+
+/* ===== Animations ===== */
+
+@keyframes moveBlob1 {
+  0%   { transform: translate(-20vw, -20vh) scale(1); }
+  25%  { transform: translate(60vw, -10vh) scale(1.2); }
+  50%  { transform: translate(70vw, 60vh) scale(1); }
+  75%  { transform: translate(-10vw, 70vh) scale(1.15); }
+  100% { transform: translate(-20vw, -20vh) scale(1); }
+}
+
+@keyframes moveBlob2 {
+  0%   { transform: translate(70vw, 60vh) scale(1.1); }
+  25%  { transform: translate(-10vw, 50vh) scale(1); }
+  50%  { transform: translate(-20vw, -20vh) scale(1.2); }
+  75%  { transform: translate(60vw, -10vh) scale(1); }
+  100% { transform: translate(70vw, 60vh) scale(1.1); }
+}
+
+@keyframes moveBlob3 {
+  0%   { transform: translate(30vw, -30vh) scale(1); }
+  25%  { transform: translate(80vw, 30vh) scale(1.2); }
+  50%  { transform: translate(20vw, 80vh) scale(1); }
+  75%  { transform: translate(-30vw, 40vh) scale(1.15); }
+  100% { transform: translate(30vw, -30vh) scale(1); }
+}
