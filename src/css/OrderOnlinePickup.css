@@ -1,8 +1,10 @@
 .pickup-container {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   background: radial-gradient(
       circle at 30% 20%,
@@ -17,11 +19,11 @@
     linear-gradient(135deg, #0b0f14, #0f1720);
 }
 
-
+/* Card stays on top */
 .pickup-card {
   position: relative;
   z-index: 2;
-  padding: 60px 60px;
+    padding: 60px 60px;
   width: 550px;
   max-width: 90%;
 
@@ -35,7 +37,6 @@
   text-align: center;
   color: white;
 }
-
 
 
 
