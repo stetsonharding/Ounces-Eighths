@@ -6,15 +6,16 @@ export default function Header() {
   return (
     <div className="header">
 
-      
-      
+      {/* Background layer (this is what zooms) */}
+      <div className="hero-bg" />
+
+      {/* (Optional) fog layers — you can delete these if you don’t want them yet */}
+      <div className="fog fog-1" />
+      <div className="fog fog-2" />
+
       <Navbar expand="lg" variant="dark" className="header-navbar">
         <Navbar.Brand className="header-logo">LOGO</Navbar.Brand>
-
-        {/* ✅ Hamburger */}
         <Navbar.Toggle aria-controls="main-navbar" />
-
-        {/* ✅ Collapsible area */}
         <Navbar.Collapse id="main-navbar">
           <Nav className="ms-auto header-nav-links">
             <Nav.Link href="#home" className="header-nav-link">HOME</Nav.Link>
@@ -24,7 +25,9 @@ export default function Header() {
       </Navbar>
 
       <div className="header-content">
-        <h1 className="header-title">Premium <span className="cannabis-span">Cannabis</span></h1>
+        <h1 className="header-title">
+          Premium <span className="cannabis-span">Cannabis</span>
+        </h1>
         <p className="header-subtitle">Explore the best weed at the best prices, 21+ only</p>
         <Button className="cta-button">SHOP ONLINE</Button>
       </div>

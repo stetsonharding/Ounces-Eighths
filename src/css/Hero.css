@@ -1,10 +1,6 @@
 .header {
   position: relative;
   height: 80vh;
-  background-image: url(../assets/HeroBackground.svg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: white;
 
   display: flex;
@@ -13,17 +9,44 @@
   justify-content: center;
   padding-top: 4rem;
 
-
-  overflow: hidden; /* make sure overlay stays inside */
+  overflow: hidden;
 }
+@keyframes cinematicZoom {
+  0%, 100% { transform: scale(1); }
+ 50% { transform: scale(1.025); }
+
+}
+
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image: url(../assets/HeroBackground.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform-origin: center;
+  animation: cinematicZoom 36s ease-in-out infinite;
+}
+
 
 .header::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);  /* black with 50% opacity */
-  z-index: 1;  /* behind content */
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  pointer-events: none;
 }
+.header-navbar,
+.header-content {
+  position: relative;
+  z-index: 3;
+}
+
 
 /* Then make sure the content is above overlay: */
 .header-content {
@@ -202,6 +225,11 @@ font-size: 1.2rem;
 .cta-button {
   animation: idleGlow 6s ease-in-out infinite;
 }
+
+
+
+
+
 
 
 /* =========================
