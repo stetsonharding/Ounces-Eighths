@@ -4,6 +4,10 @@ import InfoBar from './components/InfoBar.jsx'
 import "../src/css/Infobar.css"
 import OrderOnlinePickup from './components/OrderOnlinePickup.jsx'
 import ShopByCategory from './components/ShopByCategory.jsx'
+import WhoWeAre from './components/WhoWeAre.jsx'
+import WhoWeAreBackground from "../src/assets/WhoWeAreBackground.svg"
+import GoogleMap from "./assets/GoogleMap.jpg"
+
 function App() {
   return (
     <>
@@ -11,6 +15,7 @@ function App() {
     <InfoBar />
     <OrderOnlinePickup />
     <ShopByCategory />
+    <WhoWeAre  mapImage={GoogleMap}/>
     </>
   )
 }
