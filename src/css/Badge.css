@@ -1,0 +1,85 @@
+/* src/css/BadgeRow.css */
+
+.badge-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: clamp(18px, 4vw, 56px);
+  padding: clamp(18px, 4vw, 40px) 16px;
+  flex-wrap: wrap; /* wraps nicely on small screens */
+}
+
+/* Each badge */
+.badge-card {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+}
+
+/* Rounded square background behind the icon */
+/* .badge-iconWrap {
+  width: 100%;
+  height: 118px;
+  border-radius: 18px;
+  background: #d9d9d9;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+} */
+
+.badge-icon {
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+}
+
+/* Text under badge */
+.badge-text {
+  margin-top: 10px;
+  line-height: 1.1;
+}
+
+.badge-top {
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff; 
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.badge-label {
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+/* Simple “spice”: hover lift */
+.badge-card:hover .badge-iconWrap {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.42);
+}
+
+/* Mobile tuning */
+@media (max-width: 520px) {
+  /* .badge-card {
+    width: 150px;
+  } */
+  /* .badge-iconWrap {
+    width: 104px;
+    height: 104px;
+    border-radius: 16px;
+  } */
+  /* .badge-icon {
+    width: 76px;
+    height: 76px;
+  }
+  .badge-label,
+  .badge-top {
+    font-size: 16px;
+  } */
+}
