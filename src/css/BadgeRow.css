@@ -5,62 +5,9 @@
   overflow: hidden;
 }
 
-/* keep badges above layers */
-.badgeSection .badge-row {
-  position: relative;
-  z-index: 2;
-}
-
-/* =========================
-   SUBTLE CANNABIS BACKDROP
-   - soft green haze
-   - faint "vein" lines
-   - gentle drift (not flashy)
-========================= */
-.badgeSection__shards {
-  position: absolute;
-  inset: -160px;
-  z-index: 0;
-  pointer-events: none;
-
-  background:
-    /* soft haze blobs */
-    radial-gradient(circle at 18% 38%, rgba(34,197,94,0.16), transparent 58%),
-    radial-gradient(circle at 82% 68%, rgba(16,185,129,0.12), transparent 58%),
-    radial-gradient(circle at 48% 92%, rgba(132,255,0,0.08), transparent 60%),
-
-    /* very faint "leaf vein" texture (diagonal lines) */
-    repeating-linear-gradient(
-      135deg,
-      rgba(34,197,94,0.045) 0px,
-      rgba(34,197,94,0.045) 1px,
-      transparent 1px,
-      transparent 16px
-    ),
-
-    /* subtle depth */
-    linear-gradient(to bottom, rgba(255,255,255,0.025), transparent 55%);
-
-  opacity: 0.9;
-  filter: blur(0px);
-  transform: translate3d(0,0,0);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .badgeSection__shards {
-    animation: terpeneDrift 18s ease-in-out infinite;
-  }
-}
-
-@keyframes terpeneDrift {
-  0%   { transform: translate3d(-2%, -1%, 0) scale(1.01); }
-  50%  { transform: translate3d( 2%,  1%, 0) scale(1.01); }
-  100% { transform: translate3d(-2%, -1%, 0) scale(1.01); }
-}
 
 /* =========================
    SUBTLE LIGHT PASS
-   (optional, much quieter than before)
 ========================= */
 .badgeSection__sweep {
   position: absolute;
@@ -69,16 +16,13 @@
   pointer-events: none;
 
   background:
-    linear-gradient(
-      90deg,
+    linear-gradient(90deg,
       transparent 0%,
-      rgba(34,197,94,0.00) 40%,
-      rgba(34,197,94,0.08) 50%,
-      rgba(34,197,94,0.00) 60%,
-      transparent 100%
-    );
-
-  opacity: 0.35;
+      rgba(34, 197, 94, 0.00) 40%,
+      rgba(34, 197, 94, 0.08) 50%,
+      rgba(34, 197, 94, 0.00) 60%,
+      transparent 100%);
+  opacity: 1;
   mix-blend-mode: screen;
 }
 
@@ -89,30 +33,15 @@
 }
 
 @keyframes softSweep {
-  0%   { transform: translateX(-55%); }
-  50%  { transform: translateX( 55%); }
-  100% { transform: translateX(-55%); }
-}
-
-/* Optional: gentler float on badges */
-@media (prefers-reduced-motion: no-preference) {
-  .badge-card {
-    animation: badgeFloat 8.5s ease-in-out infinite;
+  0% {
+    transform: translateX(-55%);
   }
-  .badge-card:nth-child(2) { animation-duration: 9.2s; animation-delay: -1.0s; }
-  .badge-card:nth-child(3) { animation-duration: 8.9s; animation-delay: -2.0s; }
-}
 
-@keyframes badgeFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
+  50% {
+    transform: translateX(55%);
+  }
 
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .badgeSection__shards,
-  .badgeSection__sweep,
-  .badge-card {
-    animation: none !important;
+  100% {
+    transform: translateX(-55%);
   }
 }
