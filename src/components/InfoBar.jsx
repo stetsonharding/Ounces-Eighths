@@ -25,7 +25,7 @@ export default function InfoBar() {
 
         <div className="divider" />
 
-        <div className="right">
+        <div className="right-l">
           <p className={`hours-text hours ${isOpenNow ? "open" : "closed"}`}>
             <span className={`status-dot ${isOpenNow ? "on" : ""}`} />
             Open 8AM – 10PM
