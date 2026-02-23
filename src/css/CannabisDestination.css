@@ -1,75 +1,262 @@
-.about {
-  position: relative;
+
+
+.contactUs{
   width: 100%;
-  min-height: 520px; /* controls section height */
-  padding: clamp(3rem, 6vw, 6rem) clamp(1.5rem, 6vw, 5rem);
+  min-height: 100vh;          /* better than height: 100% */
+  position: relative;
+  overflow: hidden;
 
-  background-image: url("../assets/aboutBackground.svg");
-  background-size: contain;        /* 🔑 KEY CHANGE */
-  background-position: center;
+  background-color: #000;
+
+  /* zoom control */
+  --bgZoom: 85%;              /* LOWER = more zoomed out (try 75%, 70%) */
+
+  background-image: url('../assets/cannabis_Destination.svg');
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: var(--bgZoom) auto;
 
-  background-color: #0b0f0c; /* fills empty space if aspect ratio differs */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0;
 }
 
-
-.about__overlay {
+/* ===== OVERLAY / VIGNETTE ===== */
+.contactUs__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.75) 0%,
-    rgba(0, 0, 0, 0.55) 40%,
-    rgba(0, 0, 0, 0.25) 100%
-  );
+  pointer-events: none;
   z-index: 1;
+
+  /* wash + vignette feel */
+  background:
+    radial-gradient(1200px 520px at 50% 55%, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.78)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.70));
 }
 
-.about__content {
+/* ===== CONTENT LAYOUT ===== */
+.contactUs__inner {
   position: relative;
   z-index: 2;
-  max-width: 720px;
+
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 28px;
+
+  display: flex;
+  justify-content: center;
 }
 
-.about__title {
-  margin: 0 0 1rem;
+.contactUs_Title{
+  color:#ffffff
+}
+
+.contactUs__card {
+  width: min(860px, 92vw);
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.75),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+
+  padding: 42px 44px 36px;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ===== TYPOGRAPHY ===== */
+.contactUs__title {
+  margin: 0 0 18px;
   color: #ffffff;
-  font-weight: 900;
+
   text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.1;
-  font-size: clamp(1.75rem, 4vw, 3rem);
+  letter-spacing: 0.085em;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 900;
+
+  font-size: clamp(30px, 2.8vw, 48px);
+  line-height: 1.06;
+
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.85);
 }
 
-.about__accent {
-  color: #22c55e;
+.contactUs__green {
+  color: #2fda57;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.85);
 }
 
-.about__text {
+.contactUs__desc {
+  margin: 0 0 22px;
+  color: rgba(255, 255, 255, 0.90);
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.55;
+
+  max-width: 62ch;
+  margin-inline: auto;
+
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
+}
+
+/* ===== FORM ===== */
+.contactUs__form {
+  margin-top: 18px;
+  text-align: left;
+}
+
+/* grid */
+.contactUs__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.contactUs__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contactUs__field--full {
+  grid-column: 1 / -1;
+}
+
+.contactUs__label {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.contactUs__input,
+.contactUs__textarea {
+  width: 100%;
+  color: #ffffff;
+
+  background: rgba(10, 12, 12, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+
+  padding: 12px 12px;
+  outline: none;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.contactUs__textarea {
+  resize: vertical;
+  min-height: 110px;
+  padding: 12px 12px;
+  line-height: 1.45;
+}
+
+.contactUs__input::placeholder,
+.contactUs__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.contactUs__input:focus,
+.contactUs__textarea:focus {
+  border-color: rgba(47, 218, 87, 0.60);
+  box-shadow:
+    0 0 0 3px rgba(47, 218, 87, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  background: rgba(10, 12, 12, 0.68);
+}
+
+/* ===== ACTIONS ===== */
+.contactUs__actions {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.contactUs__btn {
+  border: none;
+  cursor: pointer;
+
+  color: #0b0f0c;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  padding: 12px 18px;
+  border-radius: 12px;
+
+  background: linear-gradient(180deg, #3af064, #1fc64a);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+  transition: transform 140ms ease, filter 140ms ease;
+}
+
+.contactUs__btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+.contactUs__btn:active {
+  transform: translateY(0px);
+}
+
+.contactUs__fineprint {
   margin: 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
-  line-height: 1.7;
-  max-width: 620px;
+  max-width: 62ch;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12.5px;
+  line-height: 1.4;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.75);
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .about {
-    padding: 3rem 1.25rem;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .contactUs {
+    height: 460px;
+    background-size: 105% auto;
   }
 
-  .about__content {
-    max-width: 100%;
-    text-align: left;
+  .contactUs__card {
+    padding: 34px 22px 30px;
+    width: min(760px, 92vw);
   }
 
-  .about__overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.75) 0%,
-      rgba(0, 0, 0, 0.55) 60%,
-      rgba(0, 0, 0, 0.35) 100%
-    );
+  .contactUs__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contactUs__field--full {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .contactUs {
+    height: 520px;
+    background-size: 125% auto;
+  }
+
+  .contactUs__title {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .contactUs__desc {
+    font-size: 15px;
   }
 }
