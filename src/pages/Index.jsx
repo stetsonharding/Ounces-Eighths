@@ -6,7 +6,8 @@ import ShopByCategory from '../components/ShopByCategory.jsx'
 import WhoWeAre from '../components/WhoWeAre.jsx'
 import GoogleMap from "../assets/GoogleMap.jpg"
 import BadgeRow from "../components/BadgeRow.jsx"
-
+import CannabisDestination from '../components/ContactUs.jsx'
+import bg from "../assets/cannabis_Destination.svg"
 
 
 const Index = () => {
@@ -18,6 +19,11 @@ const Index = () => {
             <ShopByCategory />
             <WhoWeAre mapImage={GoogleMap} />
             <BadgeRow />
+            <CannabisDestination 
+             backgroundImage={bg}
+             bgScale="58%"
+             height="720px"
+            />
 
         </>
     )

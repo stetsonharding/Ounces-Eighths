@@ -1,0 +1,155 @@
+/* Footer.css */
+
+/* ===== Footer Wrapper ===== */
+.siteFooter {
+  position: relative;
+  background: #0a0a0a;
+  color: #fff;
+  overflow: hidden;
+
+
+}
+
+/* subtle top vignette like your mock */
+.siteFooter__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 300px at 50% 0%, rgba(47, 218, 87, 0.08), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.75), rgba(0,0,0,0.85));
+}
+
+.siteFooter__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 28px;
+}
+
+/* ===== 3 Columns ===== */
+.siteFooter__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 44px;
+  align-items: start;
+  justify-content: center;
+  
+}
+
+.siteFooter__col {
+  min-width: 0;
+   display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.siteFooter__title {
+  margin: 0 0 14px;
+  color: #2fda57;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* lists */
+.siteFooter__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.siteFooter__link {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 160ms ease, transform 160ms ease;
+  display: inline-block;
+}
+
+.siteFooter__link:hover {
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+.siteFooter__list--muted .siteFooter__text {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+}
+
+/* ===== Brand block on right ===== */
+.siteFooter__brand {
+  margin-top: 22px;
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+}
+
+.siteFooter__logoBox {
+  width: 84px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.92);
+  color: #111;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.siteFooter__brandName {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.9);
+}
+
+/* ===== Bottom line ===== */
+.siteFooter__bottom {
+  margin-top: 46px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  text-align: center;
+}
+
+.siteFooter__copyright {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.siteFooter__disclaimer {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 9.5px;
+  line-height: 1.45;
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .siteFooter__inner {
+    padding: 54px 18px 24px;
+  }
+
+  .siteFooter__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .siteFooter__brand {
+    justify-items: start;
+  }
+
+  .siteFooter__bottom {
+    margin-top: 32px;
+  }
+}
