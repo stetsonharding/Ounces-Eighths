@@ -23,6 +23,11 @@
   margin-top: 0;
 }
 
+.messageNotification{
+  color: white;
+  letter-spacing: 2px;
+}
+
 /* ===== OVERLAY / VIGNETTE ===== */
 .contactUs__overlay {
   position: absolute;

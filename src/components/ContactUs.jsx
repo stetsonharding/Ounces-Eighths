@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "../css/CannabisDestination.css";
 
-
+import emailjs from "@emailjs/browser";
+import { Spinner } from "react-bootstrap";
 export default function ContactUs({
+
   
   bgScale = "58%",
   height = "100%",
@@ -16,17 +18,44 @@ export default function ContactUs({
     email: "",
     message: "",
   });
+  
+    const [messageNotification, setMessageNotification] = useState("");
+  const [loading, setLoading] = useState(false);
 
   function updateField(e) {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   }
 
-  function handleSubmit(e) {
+ 
+    //Emailjs - send message.
+  function sendEmail(e) {
     e.preventDefault();
-    console.log("Contact form submitted:", form);
-    alert("Thanks! We’ll get back to you shortly.");
-    setForm({ name: "", email: "", phone: "", message: "" });
+
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_v9hywjc",
+        "template_t89vvs7",
+        e.target,
+        "user_OcADP2ZtNbUvQnfGd1atQ"
+      )
+      .then(
+        (result) => {
+          setLoading(false);
+          setMessageNotification("Message sent.");
+        },
+        (error) => {
+          setLoading(false);
+          setMessageNotification(
+            "Error sending your message, please try again."
+          );
+        }
+      );
+
+    e.target.reset();
+       setForm({name: "", email:"", message: ""})
   }
 
   return (
@@ -53,7 +82,7 @@ export default function ContactUs({
 
           <h1 className="contactUs_Title">Contact Us</h1>
 
-          <form className="contactUs__form" onSubmit={handleSubmit}>
+          <form className="contactUs__form" onSubmit={sendEmail}>
             <div className="contactUs__grid">
               <div className="contactUs__field">
                 <label className="contactUs__label" htmlFor="name">
@@ -110,7 +139,11 @@ export default function ContactUs({
               <button className="contactUs__btn" type="submit">
                 Send Message
               </button>
-
+              {loading &&      <Spinner style={{ color: "#fff" }} animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>}
+           
+        <h2 className="messageNotification">{messageNotification}</h2>
               <p className="contactUs__fineprint">
                 By submitting, you agree to be contacted back regarding your request.
               </p>

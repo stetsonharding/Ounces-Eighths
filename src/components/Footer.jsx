@@ -46,6 +46,7 @@ export default function Footer({
           {/* Column 3 */}
         
 
+<div className="test">
 
           <div className="siteFooter__col">
             <h3 className="siteFooter__title">CONTACT</h3>
@@ -68,6 +69,7 @@ export default function Footer({
           </div>
         </div>
          
+</div>
 
         <div className="siteFooter__bottom">
           <div className="siteFooter__copyright">© {date} {copyright}</div>
