@@ -17,6 +17,7 @@ export default function CategoryGrid({ title = "Shop by Category", items = [], o
             key={item.id}
             name={item.name}
             image={item.image}
+            href={item.href}
             onClick={() => onItemClick?.(item)}
           />
         ))}
