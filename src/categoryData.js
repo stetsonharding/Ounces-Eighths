@@ -10,13 +10,13 @@ import Topicals from "../src/assets/products/Topicals.svg"
 
 
 export const categories = [
-  { id: "flower", name: "Flower", image: Flower },
-  { id: "preroll", name: "Pre-Roll", image: preRoll  },
-  { id: "edibles", name: "Edibles", image: Edibles  },
-  { id: "concentrates", name: "Concentrates", image: Concentrates  },
-  { id: "tinctures", name: "Tinctures", image: Tinctures  },
-  { id: "topicals", name: "Topicals", image: Topicals  },
-  { id: "vape", name: "Vape", image: Vape  },
-  { id: "liquid-edibles", name: "Liquid Edibles", image: Concentrates  },
-  { id: "deals", name: "Deals", image: preRoll  },
+  { id: "flower", name: "Flower", image: Flower, href: "https://selection.thekushery.rocks/orderOnline/evergreenWay/menu" },
+  { id: "preroll", name: "Pre-Roll", image: preRoll, href: ""  },
+  { id: "edibles", name: "Edibles", image: Edibles, href: "https://selection.thekushery.rocks/orderOnline/evergreenWay/menu/edible"  },
+  { id: "concentrates", name: "Concentrates", image: Concentrates, href: ""  },
+  { id: "tinctures", name: "Tinctures", image: Tinctures, href: ""  },
+  { id: "topicals", name: "Topicals", image: Topicals, href: ""  },
+  { id: "vape", name: "Vape", image: Vape, href: ""  },
+  { id: "liquid-edibles", name: "Liquid Edibles", image: Concentrates, href: ""  },
+  { id: "deals", name: "Deals", image: preRoll, href: ""  },
 ];
