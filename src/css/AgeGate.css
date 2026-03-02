@@ -1,0 +1,78 @@
+.ageGateOverlay {
+  position: fixed;
+  inset: 0;
+  background: #000; /* pure black background */
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  padding: 24px;
+}
+
+.ageGateCard {
+  width: min(720px, 92vw);
+  text-align: center;
+  padding: 44px 28px 28px;
+
+  background: #000; /* keep the card black too */
+}
+
+.ageGateLogoArea {
+  width: 320px;
+  height: 60px;
+  margin: 0 auto 46px;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid #505050; /* placeholder box like the mockup */
+  border-radius: 0; /* square edges */
+}
+
+.ageGateLogoText {
+  color: #a8a8a8;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.ageGateTitle {
+  margin: 0 0 28px 0;
+  color: #fff;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 900;
+}
+
+.ageGateButtons {
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+}
+
+.ageGateBtn {
+  width: min(260px, 80vw);
+  height: 64px;
+  border: none;
+  border-radius: 0; /* square like the mockup */
+  font-size: 28px;
+  font-weight: 900;
+  cursor: pointer;
+  color: #fff;
+}
+
+.ageGateBtn:active {
+  transform: translateY(1px);
+}
+
+.ageGateYes {
+  background: #1ea83a;
+}
+
+.ageGateNo {
+  background: #e21b1b;
+}
+
+.ageGateFinePrint {
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}

@@ -131,7 +131,7 @@
 
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 1250px) {
   .who-we-are {
     padding: 80px 24px;
     min-height: auto;
@@ -155,7 +155,6 @@
     flex-direction: column-reverse;
   }
 }
-
 
 
 .cta-row {

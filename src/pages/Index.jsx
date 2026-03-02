@@ -8,11 +8,13 @@ import GoogleMap from "../assets/GoogleMap.jpg"
 import BadgeRow from "../components/BadgeRow.jsx"
 import CannabisDestination from '../components/ContactUs.jsx'
 import bg from "../assets/cannabis_Destination.svg"
+import AgeGate from '../components/AgeGate.jsx'
 
 
 const Index = () => {
     return (
         <>
+        <AgeGate/>
             <Hero />
             <InfoBar />
             <OrderOnlinePickup />
