@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero.jsx'
 import InfoBar from '../components/InfoBar.jsx'
-import OrderOnlinePickup from '../components/OrderOnlinePickup.jsx'
+import OrderOnlinePickupContainer from '../components/OrderOnlinePickupContainer.jsx'
 import ShopByCategory from '../components/ShopByCategory.jsx'
 import WhoWeAre from '../components/WhoWeAre.jsx'
 import GoogleMap from "../assets/GoogleMap.jpg"
@@ -17,7 +17,7 @@ const Index = () => {
         <AgeGate/>
             <Hero />
             <InfoBar />
-            <OrderOnlinePickup />
+           <OrderOnlinePickupContainer/>
             <ShopByCategory />
             <WhoWeAre mapImage={GoogleMap} />
             <BadgeRow />
