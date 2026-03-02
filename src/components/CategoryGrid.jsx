@@ -9,19 +9,13 @@ export default function CategoryGrid({ title = "Shop by Category", items = [], o
       <div className="cat-bgGlow cat-bgGlow1" />
       <div className="cat-bgGlow cat-bgGlow2" />
 
-      <h2 className="cat-title">{title}</h2>
-
-      <div className="cat-grid">
-        {items.map((item) => (
+ 
+       
           <CategoryCard
-            key={item.id}
-            name={item.name}
-            image={item.image}
-            href={item.href}
-            onClick={() => onItemClick?.(item)}
+            
           />
-        ))}
-      </div>
+      
+     
     </section>
   );
 }
