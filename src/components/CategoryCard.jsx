@@ -21,7 +21,9 @@ const CATEGORIES = [
   { key: "tincture", label: "Tinctures", img: Tinctures },
   { key: "topical", label: "Topicals", img: Topicals },
   { key: "vape", label: "Vape", img: Vape },
-  { key: "deals", label: "Deals", img: Flower },
+  { key: "liquid Edibles", label: "Liquid Edibles", img: Vape },
+  
+
 ];
 
 export default function CategoryCard() {
