@@ -1,12 +1,13 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-import Flower from "../assets/products/Flower.svg";
-import Edibles from "../assets/products/Edibles.svg";
-import Concentrates from "../assets/products/Concentrates.svg";
-import preRoll from "../assets/products/preRoll.svg";
-import Tinctures from "../assets/products/Tinctures.svg";
-import Topicals from "../assets/products/Topicals.svg";
-import Vape from "../assets/products/Vape.svg";
+import Flower from "../assets/products/Flower.png";
+import Edibles from "../assets/products/Edibles.png";
+import Concentrates from "../assets/products/Concentrates.png";
+import preRoll from "../assets/products/preRoll.png";
+import Tinctures from "../assets/products/Tinctures.png";
+import Topicals from "../assets/products/Topicals.png";
+import Vape from "../assets/products/Vape.png";
+import Deals from "../assets/products/deals.png"
 
 const STORES = [
   { id: "lynnwood", label: "Lynnwood", address: "7531 196th St SW" },
@@ -21,8 +22,8 @@ const CATEGORIES = [
   { key: "tincture", label: "Tinctures", img: Tinctures },
   { key: "topical", label: "Topicals", img: Topicals },
   { key: "vape", label: "Vape", img: Vape },
-  { key: "liquid Edibles", label: "Liquid Edibles", img: Vape },
-  
+  { key: "deals", label: "Deals", img: Deals }
+
 
 ];
 

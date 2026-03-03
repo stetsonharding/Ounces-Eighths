@@ -5,11 +5,23 @@
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 800;
   letter-spacing: 0.08em;
-  margin-bottom: 40px;
+  padding: 0;
+  margin:0;
   text-transform: uppercase;
   color: white;
 }
 
+.pickup-title-sub {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(29px, 3vw, 30px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: white;
+  
+}
 
 /* ===== LAYOUT CONTAINER ===== */
 .pickup-container {
@@ -49,6 +61,11 @@
 
   text-align: center;
   color: white;
+}
+
+
+.pickup-card:hover {
+border: .5px solid white;
 }
 
 /* ===== TEXT ===== */

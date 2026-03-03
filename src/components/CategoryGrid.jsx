@@ -8,9 +8,6 @@ export default function CategoryGrid({ title = "Shop by Category", items = [], o
     <section className="cat-wrap">
       <div className="cat-bgGlow cat-bgGlow1" />
       <div className="cat-bgGlow cat-bgGlow2" />
-
- 
-       
           <CategoryCard
             
           />

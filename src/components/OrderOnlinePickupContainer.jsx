@@ -11,7 +11,8 @@ const OrderOnlinePickupContainer = () => {
         <BackgroundBlob />
 
         {/* 🔥 Title */}
-        <h2 className="pickup-title">SELECT LOCATION</h2>
+        <h2 className="pickup-title">Order Online</h2>
+        <h3 className="pickup-title-sub">SELECT LOCATION</h3>
 
         <OrderOnlinePickups 
           location={"Lynnwood"} 

@@ -7,7 +7,7 @@ import "../css/whoWeAre.css"
 export default function WhoWeAre({
   titleTop = "YOUR GO-TO SPOT FOR EVERYTHING",
   titleBottom = "CANNABIS",
-  intervalMs = 3000,
+  intervalMs = 2000,
 }) {
   const slides = useMemo(
     () => [
@@ -15,7 +15,7 @@ export default function WhoWeAre({
       { word: "Local", sub: "Lynnwood • Monroe" },
       { word: "Trusted", sub: "Friendly budtenders" },
       { word: "Fresh", sub: "New drops weekly" },
-      { word: "Deals", sub: "Daily specials" },
+      { word: "Deals", sub: "Select Brand Discounts" },
     ],
     []
   );

@@ -116,9 +116,14 @@
 @media (max-width: 820px) {
   .whoWeAre-inner {
     grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .whoWeAre-left {
     margin-bottom: 24px;
+    
   }
 }
