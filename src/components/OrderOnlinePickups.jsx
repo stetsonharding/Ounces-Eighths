@@ -4,7 +4,7 @@ import "../css/OrderOnlinePickup.css"
 
 
 
-const OrderOnlinePickups = ({location, address, city, menuLink}) => {
+const OrderOnlinePickups = ({location, address, city, menuLink,mapSrc}) => {
   return (
     
 
@@ -13,9 +13,21 @@ const OrderOnlinePickups = ({location, address, city, menuLink}) => {
         <h1 className="title">Skip the line - Order Online.</h1>
         <h2 className="subtitle">{location} Location</h2>
 
-        <div className="map-wrapper">
+        {/* <div className="map-wrapper">
           <img src={GoogleMap} alt="Location Map" className="map-image" />
-        </div>
+        </div> */}
+            <div className="map-wrapper" style={{ width: "100%", height: "350px" }}>
+      <iframe
+        title="The Kushery Monroe Map"
+        src={mapSrc}
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
 
         <p className="address">{address} </p>
         <p className="address"> {city}</p>
