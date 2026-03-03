@@ -10,12 +10,10 @@ export default function Header() {
       {/* Background layer (this is what zooms) */}
       <div className="hero-bg" />
 
-      {/* (Optional) fog layers — you can delete these if you don’t want them yet */}
+   
       <div className="fog fog-1" />
       <div className="fog fog-2" />
 
-    
-   
 
       <div className="header-content">
         <h1 className="header-title">

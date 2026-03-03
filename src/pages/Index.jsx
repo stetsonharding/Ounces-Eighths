@@ -17,6 +17,7 @@ const Index = () => {
         <AgeGate/>
             <Hero />
             <InfoBar />
+            
            <OrderOnlinePickupContainer/>
             <ShopByCategory />
             <WhoWeAre mapImage={GoogleMap} />

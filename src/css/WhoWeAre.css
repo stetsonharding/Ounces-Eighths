@@ -1,23 +1,25 @@
-/* SECTION — make it feel like a hero */
-.who-we-are {
-  background: #000;
+.whoWeAre {
   width: 100%;
-  min-height: 85vh;
-  padding: 120px 80px;
+  min-height: 620px;
   display: flex;
   align-items: center;
-  background-image: url("../assets/WhoWeAreBackground.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.who-we-are {
+  justify-content: center;
   position: relative;
   overflow: hidden;
+
+    background-image: url(../assets/WhoWeAreBackground.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+ 
 }
 
+
+
+
 /* cinematic dark overlay */
-.who-we-are::after {
+.whoWeAre::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -31,177 +33,92 @@
   z-index: 1;
 }
 
-/* make sure content stays clickable and visible */
-.who-we-are-inner {
+
+
+.whoWeAre-inner {
+  width: min(1200px, 92vw);
   position: relative;
   z-index: 2;
-}
 
-
-/* INNER GRID */
-.who-we-are-inner {
-  max-width: 1500px;
-  /* 👈 wider */
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 520px 1fr;
-  /* 👈 bigger map column */
-  gap: 120px;
-  /* 👈 more breathing room */
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(20px, 4vw, 56px);
   align-items: center;
+
+  padding: clamp(28px, 4vw, 56px) 0;
 }
 
-.left {
+/* LEFT - rotating card */
+.whoWeAre-left {
+  width: min(420px, 100%);
+  padding: 28px;
+
+  border-radius: 22px;
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+
+  backdrop-filter: blur(10px);
+}
+
+.whoWeAre-word {
+  font-size: clamp(34px, 4.2vw, 56px);
+  font-weight: 900;
+  color: #06bb0f;
+  line-height: 1.05;
+}
+
+.whoWeAre-sub {
+  margin-top: 10px;
+  font-size: clamp(14px, 1.4vw, 18px);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* RIGHT - headline */
+.whoWeAre-right {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
-/* LEFT SIDE */
-.eyebrow {
-  color: #fff;
-  font-weight: 900;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-
-.map-card {
-
-  aspect-ratio: 4 / 3;
-  border-radius: 26px;
-  overflow: hidden;
-
-  background: #111;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  box-shadow:
-    0 30px 70px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-
-
-
-
-/* RIGHT SIDE TEXT */
-.right {
-  text-align: center;
-}
-
-.headline {
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 900;
+.whoWeAre-kicker {
+  color: rgba(255, 255, 255, 0.92);
   letter-spacing: 0.08em;
-  line-height: 1.05;
-  color: #fff;
-}
-
-.headline span {
-  display: block;
-  font-size: clamp(48px, 6vw, 96px);
-  /* 👈 much larger */
-}
-
-.headline .accent {
-  color: #2e7d32;
-  margin-top: 14px;
-}
-
-.headline {
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  line-height: 1.05;
-  color: #fff;
-}
-
-.headline span {
-  display: block;
-  font-size: clamp(48px, 6vw, 96px);
-  /* 👈 much larger */
-}
-
-.headline .accent {
-  color: #2e7d32;
-  margin-top: 14px;
-}
-
-
-/* RESPONSIVE */
-@media (max-width: 1250px) {
-  .who-we-are {
-    padding: 80px 24px;
-    min-height: auto;
-  }
-
-  .who-we-are-inner {
-    grid-template-columns: 1fr;
-    gap: 64px;
-  }
-
-  .map-card {
-    aspect-ratio: 16 / 10;
-  }
-
-  .headline span {
-    font-size: clamp(40px, 9vw, 64px);
-  }
-
-  .who-we-are-inner {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}
-
-
-.cta-row {
-  margin-top: 26px;
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.cta {
-  padding: 14px 18px;
-  border-radius: 999px;
   font-weight: 800;
-  letter-spacing: .06em;
+  font-size: clamp(28px, 4.2vw, 64px);
+  line-height: 1.05;
   text-transform: uppercase;
-  text-decoration: none;
-  transition: transform .2s ease, background .2s ease, border-color .2s ease;
 }
 
-.cta.primary {
-  background: #2e7d32;
-  color: white;
+.whoWeAre-titleBottom {
+  font-size: clamp(34px, 5vw, 76px);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-transform: uppercase;
+   color: #06bb0f;
 }
 
-.cta.ghost {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: white;
-  backdrop-filter: blur(8px);
+/* Animation */
+.in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 260ms ease, transform 260ms ease;
 }
 
-.cta:hover {
-  transform: translateY(-2px);
+.out {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 260ms ease, transform 260ms ease;
 }
 
+/* Mobile */
+@media (max-width: 820px) {
+  .whoWeAre-inner {
+    grid-template-columns: 1fr;
+  }
 
-.left {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.eyebrow {
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(8px);
+  .whoWeAre-left {
+    margin-bottom: 24px;
+  }
 }

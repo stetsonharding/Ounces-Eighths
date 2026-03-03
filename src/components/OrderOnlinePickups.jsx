@@ -2,7 +2,9 @@ import React from 'react'
 import GoogleMap from "../assets/GoogleMap.jpg"
 import "../css/OrderOnlinePickup.css"
 
-const OrderOnlinePickups = ({location, address, city}) => {
+
+
+const OrderOnlinePickups = ({location, address, city, menuLink}) => {
   return (
     
 
@@ -18,7 +20,14 @@ const OrderOnlinePickups = ({location, address, city}) => {
         <p className="address">{address} </p>
         <p className="address"> {city}</p>
 
-        <button className="shop-btn">Shop {location} Now</button>
+        <a
+  href={menuLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="shop-btn"
+>
+  Shop {location} Now
+</a>
       </div>
    
   );
