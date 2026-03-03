@@ -18,7 +18,7 @@ const OrderOnlinePickups = ({location, address, city}) => {
         <p className="address">{address} </p>
         <p className="address"> {city}</p>
 
-        <button className="shop-btn">Shop Now</button>
+        <button className="shop-btn">Shop {location} Now</button>
       </div>
    
   );
