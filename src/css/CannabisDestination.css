@@ -264,4 +264,11 @@
   .contactUs__desc {
     font-size: 15px;
   }
+
+
+  .contactUs__inner {
+    height: 100%;
+  }
+
+
 }

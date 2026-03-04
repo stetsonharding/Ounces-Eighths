@@ -13,7 +13,7 @@
 }
 @keyframes cinematicZoom {
   0%, 100% { transform: scale(1); }
- 50% { transform: scale(1.025); }
+ 50% { transform: scale(2.025); }
 
 }
 
@@ -99,15 +99,9 @@ font-size: 1.2rem;
  color:#2bda51 !important
 }
 
-.header-nav-link:hover {
-  color: #28a745;
-}
 
-/* Hero content */
-.header-content {
-  text-align: center;
-  max-width: 600px;
-}
+
+
 
 /* Titles and button */
 .header-title {
@@ -122,21 +116,9 @@ font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
-.header-button {
-  font-weight: 700;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  background-color: #28a745;
-  border: none;
-  transition: background-color 0.3s ease;
-}
 
-.header-button:hover,
-.header-button:focus {
-  background-color: #218838;
-  box-shadow: none;
-  outline: none;
-}
+
+
 .cannabis-span{
   color: #34dd59; 
   text-shadow: 0 0 18px rgba(34,197,94,0.35);
@@ -153,6 +135,7 @@ font-size: 1.2rem;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  text-decoration: none;
 
   /* premium green gradient */
   background: linear-gradient(
@@ -172,38 +155,12 @@ font-size: 1.2rem;
   overflow: hidden;
 }
 
-/* sheen layer */
-.cta-button::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -75%;
-  width: 50%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.35),
-    transparent
-  );
-  transform: rotate(20deg);
-  opacity: 0;
-}
 
 /* hover = reward */
 .cta-button:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.05);
-  box-shadow:
-    0 14px 32px rgba(34, 197, 94, 0.38),
-    inset 0 1px 0 rgba(255,255,255,0.35);
+  filter: brightness(1.15);
 }
 
-/* activate sheen only on hover */
-.cta-button:hover::after {
-  opacity: 1;
-  animation: sheen 600ms ease-out;
-}
 
 @keyframes sheen {
   0%   { left: -75%; }

@@ -1,46 +1,64 @@
-import React from "react";
-import "../css/WhoWeAre.css"
+// WhoWeAre.jsx
+import React, { useEffect, useMemo, useState } from "react";
 
-import GoogleMap from "../assets/GoogleMap.jpg"
 
-const WhoWeAre = () => {
+import "../css/whoWeAre.css"
+
+export default function WhoWeAre({
+  titleTop = "YOUR GO-TO SPOT FOR EVERYTHING",
+  titleBottom = "CANNABIS",
+  intervalMs = 2000,
+}) {
+  const slides = useMemo(
+    () => [
+      { word: "Premium", sub: "Flower • Edibles • Extracts • & More" },
+      { word: "Local", sub: "Lynnwood • Monroe" },
+      { word: "Trusted", sub: "Friendly budtenders" },
+      { word: "Fresh", sub: "New drops weekly" },
+      { word: "Deals", sub: "Select Brand Discounts" },
+    ],
+    []
+  );
+
+  const [index, setIndex] = useState(0);
+  const [phase, setPhase] = useState("in");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPhase("out");
+
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % slides.length);
+        setPhase("in");
+      }, 260);
+    }, intervalMs);
+
+    return () => clearInterval(interval);
+  }, [intervalMs, slides.length]);
+
+  const active = slides[index];
+
   return (
-    <section className="who-we-are">
-      <div className="who-we-are-inner">
+    <section className="whoWeAre">
+      <div className="whoWeAre-inner">
 
-        {/* LEFT SIDE */}
-        <div className="left">
-          <p className="eyebrow">WHO WE ARE?</p>
-
-          <div className="map-card">
-            <img
-              title="Store Location Map"
-              src={GoogleMap}
-              loading="lazy"
-            
-            />
+        {/* LEFT - ROTATING CARD */}
+        <div className="whoWeAre-left">
+          <div className={`whoWeAre-word ${phase}`}>
+            {active.word}
           </div>
-                  <div className="cta-row">
-  <a className="cta primary" href="#order">Order Online</a>
-  <a className="cta ghost" href="#directions">Get Directions</a>
-</div>
+          <div className={`whoWeAre-sub ${phase}`}>
+            {active.sub}
+          </div>
         </div>
 
-        {/* RIGHT SIDE */}
-        <div className="right">
-          <h1 className="headline">
-            <span>YOUR GO-TO</span>
-            <span>SPOT FOR</span>
-            <span>EVERYTHING</span>
-            <span className="accent">CANNABIS</span>
-          </h1>
-  
-
+        {/* RIGHT - HEADLINE */}
+        <div className="whoWeAre-right">
+          <div className="whoWeAre-kicker">{titleTop}</div>
+          <div className="whoWeAre-titleBottom">{titleBottom}</div>
         </div>
 
       </div>
     </section>
   );
-};
-
-export default WhoWeAre;
+}

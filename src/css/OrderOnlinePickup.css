@@ -1,3 +1,28 @@
+/* Select Location main title */
+.pickup-title {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0;
+  margin:0;
+  text-transform: uppercase;
+  color: white;
+}
+
+.pickup-title-sub {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(29px, 3vw, 30px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: white;
+  
+}
+
 /* ===== LAYOUT CONTAINER ===== */
 .pickup-container {
   position: relative;
@@ -38,6 +63,11 @@
   color: white;
 }
 
+
+.pickup-card:hover {
+border: .5px solid white;
+}
+
 /* ===== TEXT ===== */
 .title {
   font-size: 32px;
@@ -45,6 +75,8 @@
   letter-spacing: -0.5px;
   margin-bottom: 8px;
 }
+
+
 
 .subtitle {
   font-size: 22px;
@@ -84,22 +116,35 @@
   margin-top: 20px;
   background: linear-gradient(90deg, #16a34a, #4ade80);
   color: #051b0c;
-  border: none;
 
   padding: 14px 0;
   width: 80%;
-  max-width: 360px;               /* nicer on big screens */
+  max-width: 360px;
+
   font-size: 16px;
   font-weight: 700;
 
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  /* 🔥 IMPORTANT FIXES */
+  display: inline-block;        /* makes <a> behave like button */
+  text-align: center;
+  text-decoration: none;        /* removes underline */
+  border: none;
 }
 
+/* Hover */
 .shop-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(74, 222, 128, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+}
+
+/* Active */
+.shop-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* =========================
