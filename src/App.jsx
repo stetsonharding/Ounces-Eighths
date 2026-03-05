@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import HomePage from "./pages/Index.jsx"
 import OrderOnline from './pages/OrderOnline.jsx'
-
+import Locations from './pages/Locations.jsx'
 
 function App() {
 
@@ -16,6 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/orderOnline" element={<OrderOnline/>} />
+      <Route path="/locations" element={<Locations/>} />
     </Routes>
  
     
