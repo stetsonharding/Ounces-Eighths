@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 const OrderOnline = () => {
   return (
     <section>
-      <Banner />
+      <Banner bannerTitle="ORDER ONLINE" />
        <Container fluid className="mb-1">
       <Row>
        

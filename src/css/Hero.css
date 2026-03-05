@@ -73,11 +73,8 @@
 
 /* Logo on left */
 .header-logo {
-  /* background-color: white; */
-  color: black;
-  font-weight: 700;
-  padding: 0.5rem 1rem;
-  user-select: none;
+padding: 0;
+margin: 0;
 }
 
 /* Nav links container */
@@ -100,10 +97,14 @@ font-size: 1.2rem;
  color:#2bda51 !important
 }
 
+
+
 /* Nav Logo */
 .nav-logo {
   height: 112px;
   width: 112px;
+  margin:0;
+  padding:0;
 }
 
 
