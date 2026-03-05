@@ -9,7 +9,7 @@
   justify-content: center;
   padding-top: 4rem;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 @keyframes cinematicZoom {
   0%, 100% { transform: scale(1); }
@@ -27,9 +27,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   transform-origin: center;
-  animation: cinematicZoom 36s ease-in-out infinite;
+ 
 }
 
 
@@ -59,20 +58,22 @@
 
 /* Navbar is absolutely positioned over header */
 .header-navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
+
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  background-color: transparent !important;
+
+  background: transparent;
   z-index: 1000;
 }
 
 /* Logo on left */
 .header-logo {
-  background-color: white;
+  /* background-color: white; */
   color: black;
   font-weight: 700;
   padding: 0.5rem 1rem;
@@ -99,6 +100,11 @@ font-size: 1.2rem;
  color:#2bda51 !important
 }
 
+/* Nav Logo */
+.nav-logo {
+  height: 112px;
+  width: 112px;
+}
 
 
 
