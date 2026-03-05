@@ -1,6 +1,7 @@
 // Footer.jsx
 import React from "react";
 import "../css/Footer.css";
+import Logo from "../assets/Logo.png"
 
 export default function Footer({
   brandLine1 = "Logo",
@@ -62,7 +63,13 @@ export default function Footer({
 
             <div className="siteFooter__brand">
               <div className="siteFooter__logoBox" aria-hidden="true">
-                {brandLine1}
+             <img
+                      src={Logo}
+                      alt="Ounces & Eighths"
+                      className="nav-logo"
+            
+                    />
+            
               </div>
               <div className="siteFooter__brandName">{brandLine2}</div>
             </div>

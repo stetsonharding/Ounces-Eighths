@@ -9,6 +9,7 @@ import BadgeRow from "../components/BadgeRow.jsx"
 import CannabisDestination from '../components/ContactUs.jsx'
 import bg from "../assets/cannabis_Destination.svg"
 import AgeGate from '../components/AgeGate.jsx'
+import Footer from '../components/Footer.jsx'
 
 
 const Index = () => {
@@ -27,6 +28,7 @@ const Index = () => {
              bgScale="58%"
              height="720px"
             />
+            <Footer />
 
         </>
     )
