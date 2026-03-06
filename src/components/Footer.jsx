@@ -41,6 +41,7 @@ export default function Footer({
             <ul className="siteFooter__list">
               <li><a className="siteFooter__link" href="/">HOME</a></li>
               <li><a className="siteFooter__link" href="/orderOnline">ORDER ONLINE</a></li>
+               <li><a className="siteFooter__link" href="/locations">LOCATIONS</a></li>
             </ul>
           </div>
 
