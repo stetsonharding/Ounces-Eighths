@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "../css/AgeGate.css";
 
+import Logo from "../assets/Logo.png"
+
 export default function AgeGate({
   minAge = 21,
   storageKey = "age_verified_21_plus",
   title = "Are you 21 or older?",
-  logo = <span className="ageGateLogoText">LOGO HERE</span>,
+  // logo = <span className="ageGateLogoText"></span>,
+  logo = <img  className="ageGate_Logo" src={Logo} alt="Ouches & Eighths Logo"/>,
   onDenyRedirectUrl = "https://google.com", 
 }) {
   const [open, setOpen] = useState(false);
@@ -51,6 +54,7 @@ const handleYes = () => {
         {/* Logo area */}
         <div className="ageGateLogoArea" aria-label="Brand logo">
           {logo}
+          <p className="ageGate_logoText">Ounces & Eighths</p>
         </div>
 
         {/* Title */}

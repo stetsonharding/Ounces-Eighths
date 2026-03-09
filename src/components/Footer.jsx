@@ -27,11 +27,8 @@ export default function Footer({
 
             </div>
             <ul className="siteFooter__list">
-              <li><a className="siteFooter__link" href="/shop/flower">FLOWER</a></li>
-              <li><a className="siteFooter__link" href="/shop/edibles">EDIBLES</a></li>
-              <li><a className="siteFooter__link" href="/shop/pre-roll">PRE - ROLL</a></li>
-              <li><a className="siteFooter__link" href="/shop/concentrates">CONCENTRATES</a></li>
-              <li><a className="siteFooter__link" href="/shop/topicals">TOPICALS</a></li>
+             <li><a className="siteFooter__link" href="https://selection.thekushery.rocks/orderOnline/monroe/menu">Monroe - Menu</a></li>
+             <li><a className="siteFooter__link" href="">Lynnwood Menu</a></li>
             </ul>
           </div>
 
@@ -53,13 +50,14 @@ export default function Footer({
           <div className="siteFooter__col">
             <h3 className="siteFooter__title">CONTACT</h3>
             <ul className="siteFooter__list siteFooter__list--muted">
-              <li className="siteFooter__text">7531 196th St SW
-
-                Lynwood WA 98036</li>
-              <li className="siteFooter__text"><a style={{ textDecoration: 'none', color: "#ffffff" }} href="tel:+1234567890" className="phone-link">
-                Contact us: 4251234567
-              </a></li>
-              <li className="siteFooter__text">Monday - Friday 8am - 10pm</li>
+             
+           <a style={{ textDecoration: 'none', color: "#ffffff" }} href="tel:+3602178951" className="phone-link">
+                Monroe: (360) 217-8951
+              </a>
+              <a style={{ textDecoration: 'none', color: "#ffffff" }} href="tel:+1234567890" className="phone-link">
+                Lynnwood: 4251234567
+              </a>
+            
             </ul>
 
             <div className="siteFooter__brand">

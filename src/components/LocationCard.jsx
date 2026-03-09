@@ -31,7 +31,10 @@ const LocationCard = ({ location }) => {
           <div className="loc-row">
             <span className="loc-dot" />
             <div>
-              <strong>{location.phone}</strong>
+              <a style={{ textDecoration: 'none', color: "#ffffff" }} href={`tel:+${location.phone}`} className="phone-link">
+                Contact us: <strong>{location.phone}</strong>
+              </a>
+
               <div className="loc-muted">Call with questions</div>
             </div>
           </div>
@@ -41,7 +44,7 @@ const LocationCard = ({ location }) => {
             <div>
               {location.hours.map((h, i) => (
                 <div key={i} className="loc-hours-row">
-                  <span>{h.days}</span>
+                  <span>{h.days}</span> {" "}
                   <span>{h.time}</span>
                 </div>
               ))}

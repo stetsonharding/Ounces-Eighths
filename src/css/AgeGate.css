@@ -16,27 +16,31 @@
   background: #000; /* keep the card black too */
 }
 
-.ageGateLogoArea {
-  width: 320px;
-  height: 60px;
-  margin: 0 auto 46px;
-
-  display: grid;
-  place-items: center;
-
-  border: 2px solid #505050; /* placeholder box like the mockup */
-  border-radius: 0; /* square edges */
+.ageGateLogoArea{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  margin-bottom:6px;
 }
 
-.ageGateLogoText {
-  color: #a8a8a8;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 0.5px;
+.ageGate_logoText {
+  color: #fff;
+  padding: 0;
+  margin: 0 0 6px 0; /* reduce gap before the question */
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.ageGate_Logo {
+  width: 175px;
+  margin: 0 auto 6px;  /* tighten spacing */
+  padding: 0;
+  display: block;
 }
 
 .ageGateTitle {
-  margin: 0 0 28px 0;
+  margin: 4px 0 24px 0;
   color: #fff;
   font-size: clamp(28px, 3vw, 44px);
   font-weight: 900;
