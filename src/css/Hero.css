@@ -75,6 +75,7 @@
 .header-logo {
 padding: 0;
 margin: 0;
+
 }
 
 /* Nav links container */
@@ -101,8 +102,8 @@ font-size: 1.2rem;
 
 /* Nav Logo */
 .nav-logo {
-  height: 112px;
-  width: 112px;
+  height: 115px;
+  width: 115px;
   margin:0;
   padding:0;
 }

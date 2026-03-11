@@ -1,11 +1,10 @@
 // Footer.jsx
 import React from "react";
 import "../css/Footer.css";
-import Logo from "../assets/Logo.png"
+import Logo from "../assets/Logo.svg"
 
 export default function Footer({
   brandLine1 = "Logo",
-  brandLine2 = "Ounces & Eighths",
   disclaimer = `Disclaimer: Cannabis can impair concentration, coordination, and judgment. Do not operate a vehicle or machinery under the influence of this drug. This product has intoxicating effects and may be habit forming. There may be health risks associated with consumption of this product. For use only by adults twenty-one and older. Keep out of the reach of children.`,
   copyright = " All Rights Ounces & Eighths",
 }) {
@@ -70,7 +69,7 @@ export default function Footer({
                     />
             
               </div>
-              <div className="siteFooter__brandName">{brandLine2}</div>
+           
             </div>
           </div>
         </div>

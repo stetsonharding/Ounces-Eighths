@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../css/AgeGate.css";
 
-import Logo from "../assets/Logo.png"
+import Logo from "../assets/Logo.svg"
 
 export default function AgeGate({
   minAge = 21,
@@ -54,7 +54,7 @@ const handleYes = () => {
         {/* Logo area */}
         <div className="ageGateLogoArea" aria-label="Brand logo">
           {logo}
-          <p className="ageGate_logoText">Ounces & Eighths</p>
+  
         </div>
 
         {/* Title */}
