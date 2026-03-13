@@ -22,8 +22,8 @@ const LOCATIONS = [
     // image:
     //   "https://images.unsplash.com/photo-1526481280695-3c687fd5432c",
 
-    // mapsUrl:
-    //   "https://maps.google.com/?q=7531+196th+St+SW+Lynnwood+WA",
+    mapsUrl:
+      "",
 
     orderUrl: "/orderOnline"
   },
@@ -43,8 +43,8 @@ const LOCATIONS = [
     // image:
     //   "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
 
-    // mapsUrl:
-    //   "https://maps.google.com/?q=16412+Trombley+Rd+Monroe+WA",
+    mapsUrl:
+      "https://www.google.com/maps/dir//The+Kushery+Monroe+%7C+Marijuana+%7C+Pot+%7C+Weed,+16412+Trombley+Rd,+Snohomish,+WA+98290/@47.9503092,-122.2068299,5715m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x549aa9dbc48a20fb:0x1a44f4f343fcf9e7!2m2!1d-122.0110644!2d47.8923142?hl=en&authuser=0&entry=ttu&g_ep=EgoyMDI2MDMwNS4wIKXMDSoASAFQAw%3D%3D",
 
     orderUrl: "https://selection.thekushery.rocks/orderOnline/monroe/menu"
   },
