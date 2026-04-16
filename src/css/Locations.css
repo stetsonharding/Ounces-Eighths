@@ -4,7 +4,7 @@
 
     background:
         radial-gradient(800px 400px at 15% 10%,
-            rgba(34, 197, 94, .20),
+            rgba(53, 197, 34, 0.2),
             transparent 60%),
 
         radial-gradient(900px 500px at 85% 30%,
@@ -56,7 +56,6 @@
 
 .loc-card:hover {
     transform: translateY(-8px);
-
     box-shadow:
         0 20px 50px rgba(0, 0, 0, .7),
         0 0 80px rgba(34, 197, 94, .2);
@@ -68,12 +67,17 @@
     height: 240px;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .loc-card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 80%;
+    height: 90%;
+    margin: 10px 0 0 0;
+ 
+    /* object-fit: cover; */
 
     transition: transform .5s ease;
 }

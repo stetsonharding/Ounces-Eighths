@@ -2,6 +2,8 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 
 const LocationCard = ({ location }) => {
+
+  console.log(location.image)
   return (
     <Card className="loc-card">
 

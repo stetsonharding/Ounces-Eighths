@@ -18,6 +18,7 @@ const OrderOnlinePickupContainer = () => {
           location={"Lynnwood"} 
           address={"7531 196th St SW"} 
           city={"Lynnwood WA 98036"}
+           mapSrc={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d582.7136907884701!2d-122.33537533864221!3d47.821782386749526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901b6804487c93%3A0x8fdcf45c395a20ec!2sOunces%20%26%20Eighths!5e1!3m2!1sen!2sus!4v1773688980478!5m2!1sen!2sus"}
           menuLink={""}
         />
 
