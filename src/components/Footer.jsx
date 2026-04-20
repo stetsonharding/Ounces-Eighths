@@ -27,7 +27,7 @@ export default function Footer({
             </div>
             <ul className="siteFooter__list">
              <li><a className="siteFooter__link" href="https://selection.thekushery.rocks/orderOnline/monroe/menu">Monroe - Menu</a></li>
-             <li><a className="siteFooter__link" href="">Lynnwood Menu</a></li>
+             <li><a className="siteFooter__link" href="">Lynnwood Menu (COMING SOON)</a></li>
             </ul>
           </div>
 
@@ -54,7 +54,7 @@ export default function Footer({
                 Monroe: (360) 217-8951
               </a>
               <a style={{ textDecoration: 'none', color: "#ffffff" }} href="tel:+1234567890" className="phone-link">
-                Lynnwood: 4251234567
+                Lynnwood (COMING SOON)
               </a>
             
             </ul>

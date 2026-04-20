@@ -3,17 +3,17 @@ import "../css/LocationMenuSwitcher.css"
 
 const LOCATIONS = [
   {
-    id: "lynnwood",
-    name: "Lynnwood",
-    label: "Ounces & Eighths - Lynnwood",
-    menuUrl: "https://your-lynnwood-menu-link.com",
-  },
-  {
     id: "monroe",
     name: "Monroe",
     label: "Ounces & Eighths - Monroe",
     menuUrl: "https://selection.thekushery.rocks/orderOnline/monroe/menu",
   },
+  // {
+  //   id: "lynnwood",
+  //   name: "Lynnwood",
+  //   label: "Ounces & Eighths - Lynnwood",
+  //   menuUrl: "https://your-lynnwood-menu-link.com",
+  // },
 ];
 
 const LocationMenuSwitcher = () => {
