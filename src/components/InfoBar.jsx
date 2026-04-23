@@ -1,36 +1,44 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 import "../css/InfoBar.css";
 
-export default function InfoBar() {
-  // OPTIONAL: simple “open now” indicator (local time)
-  const isOpenNow = useMemo(() => {
-    const now = new Date();
-    const hour = now.getHours(); // 0-23
-    // Open 8AM (8) - 10PM (22). If you mean “closes at 10”, keep < 22.
-    return hour >= 8 && hour < 22;
-  }, []);
+const infoItems = [
+  {
+    title: "DAILY DEALS",
+    subtitle: "Save up to 40%",
+    icon: "%",
+  },
+  {
+    title: "PREMIUM QUALITY",
+    subtitle: "Top shelf, always",
+    icon: "✦",
+  },
+  {
+    title: "FAST PICKUP",
+    subtitle: "Ready in minutes",
+    icon: "➜",
+  },
 
+];
+
+export default function InfoBar() {
   return (
     <Container fluid className="info-container">
-      {/* You can keep your blob elements if you already have them */}
-      <div className="blob blob-1" />
-      <div className="blob blob-2" />
-      <div className="blob blob-3" />
+      <div className="info-pill">
+        {infoItems.map((item, index) => (
+          <React.Fragment key={item.title}>
+            <div className="info-item">
+              <div className="info-icon">{item.icon}</div>
 
-      <div className="hours-information">
-        <div className="left">
-          <p className="hours-text brand">Ounces &amp; Eighths</p>
-        </div>
+              <div className="info-copy">
+                <p className="info-title">{item.title}</p>
+                <p className="info-subtitle">{item.subtitle}</p>
+              </div>
+            </div>
 
-        <div className="divider" />
-
-        <div className="right-l">
-          <p className={`hours-text hours ${isOpenNow ? "open" : "closed"}`}>
-            <span className={`status-dot ${isOpenNow ? "on" : ""}`} />
-            Open 8AM – 10PM
-          </p>
-        </div>
+            {index !== infoItems.length - 1 && <div className="info-divider" />}
+          </React.Fragment>
+        ))}
       </div>
     </Container>
   );

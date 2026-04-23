@@ -57,13 +57,14 @@ const LocationCard = ({ location }) => {
 
         <div className="loc-buttons">
 
-          <Button
+              {location.mapsUrl ?   <Button
             className="btn-green"
             href={location.orderUrl}
             target="_blank"
           >
             Order Online
-          </Button>
+          </Button> :  null}
+        
 
           <Button
             className="btn-outline"

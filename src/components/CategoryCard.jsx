@@ -10,8 +10,8 @@ import Vape from "../assets/products/Vape.png";
 import Deals from "../assets/products/deals.png"
 
 const STORES = [
-  { id: "lynnwood", label: "Lynnwood", address: "7531 196th St SW" },
   { id: "monroe", label: "Monroe", address: "16412 Trombley Rd" },
+  // { id: "lynnwood", label: "Lynnwood", address: "7531 196th St SW" },
 ];
 
 const CATEGORIES = [
@@ -28,7 +28,7 @@ const CATEGORIES = [
 ];
 
 export default function CategoryCard() {
-  const [storeId, setStoreId] = useState("lynnwood");
+  const [storeId, setStoreId] = useState("monroe");
   const [isSwitching, setIsSwitching] = useState(false);
 
   const store = useMemo(() => STORES.find((s) => s.id === storeId), [storeId]);
