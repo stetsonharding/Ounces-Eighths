@@ -16,9 +16,10 @@ const LOCATIONS = [
     address2: "Monroe WA 98290",
     phone: "(360) 217-8951",
 
-    hours: [
-      { days: "Monday - Sunday", time: "8AM - 10PM" },
-    ],
+   hours: [
+  { days: "Sunday - Thursday:", time: "8AM - 10PM" },
+  { days: "Friday & Saturday:", time: "8AM - 12AM" },
+],
 
     image:
       Ounces_Eighths_Monroe,
@@ -34,7 +35,7 @@ const LOCATIONS = [
     tagline: "Skip the line - Order Online.",
     address1: "7531 196th St SW",
     address2: "Lynnwood WA 98036",
-    phone: "(425) 000-0000",
+    phone: "(000) 000-0000",
 
     hours: [
       { days: "Monday - Sunday", time: "8AM - 10PM" },
