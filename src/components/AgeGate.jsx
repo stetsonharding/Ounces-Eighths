@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../css/AgeGate.css";
 
-import Logo from "../assets/O&ECircle.png"
+import Logo from "../assets/logo_Circle.png"
 
 export default function AgeGate({
   minAge = 21,

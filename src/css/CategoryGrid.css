@@ -16,6 +16,7 @@
   overflow: hidden;
 }
 
+
 .cat-bgGlow {
   position: absolute;
   inset: auto;
@@ -111,6 +112,11 @@
   place-items: center;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
   transition: transform 0.2s ease;
+}
+
+
+.shopCat__imgWrap:hover {
+ cursor: pointer;
 }
 
 .shopCat__card:hover .shopCat__imgWrap {
