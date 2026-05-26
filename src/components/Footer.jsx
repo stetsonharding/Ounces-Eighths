@@ -1,7 +1,7 @@
 // Footer.jsx
 import React from "react";
 import "../css/Footer.css";
-import Logo from "../assets/O&ECircle.png"
+import Logo from "../assets/logo_Circle.png"
 
 export default function Footer({
   brandLine1 = "Logo",

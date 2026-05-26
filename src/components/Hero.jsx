@@ -5,23 +5,27 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <div className="header">
+ <div className="header">
+  <div className="hero-bg" />
+  <div className="hero-overlay" />
 
-      {/* Background layer (this is what zooms) */}
-      <div className="hero-bg" />
+  <div className="header-content">
+    <div className="hero-badge">21+ • Order Online • Pickup Available</div>
 
-   
-      <div className="fog fog-1" />
-      <div className="fog fog-2" />
+    <h1 className="header-title">
+      Premium Cannabis.<br />
+      <span>Better Prices.</span>
+    </h1>
 
+    <p className="header-subtitle">
+      Shop quality flower, vapes, edibles, concentrates, and more from your local Washington dispensary.
+    </p>
 
-      <div className="header-content">
-        <h1 className="header-title">
-          Premium <span className="cannabis-span">Cannabis</span>
-        </h1>
-        <p className="header-subtitle">Explore the best weed at the best prices, 21+ only</p>
-        <Link to="/orderOnline" className="cta-button">SHOP ONLINE</Link>
-      </div>
+    <div className="hero-actions">
+      <Link to="/orderOnline" className="cta-button">Shop Online</Link>
+      <Link to="/locations" className="secondary-button">View Locations</Link>
     </div>
+  </div>
+</div>
   );
 }
