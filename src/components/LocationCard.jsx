@@ -33,7 +33,11 @@ const LocationCard = ({ location }) => {
           <div className="loc-row">
             <span className="loc-dot" />
             <div>
-              <a style={{ textDecoration: 'none', color: "#ffffff" }} href={`tel:+${location.phone}`} className="phone-link">
+              <a
+                href={`tel:${location.phone.replace(/\D/g, '')}`}
+                style={{ textDecoration: 'none', color: '#ffffff' }}
+                className="phone-link"
+              >
                 Contact us: <strong>{location.phone}</strong>
               </a>
 
@@ -57,14 +61,14 @@ const LocationCard = ({ location }) => {
 
         <div className="loc-buttons">
 
-              {location.mapsUrl ?   <Button
+          {location.mapsUrl ? <Button
             className="btn-green"
             href={location.orderUrl}
             target="_blank"
           >
             Order Online
-          </Button> :  null}
-        
+          </Button> : null}
+
 
           <Button
             className="btn-outline"
