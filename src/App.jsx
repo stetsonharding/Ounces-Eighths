@@ -1,6 +1,6 @@
 import './App.css'
 import Footer from './components/Footer.jsx'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import HomePage from "./pages/Index.jsx"
 import OrderOnline from './pages/OrderOnline.jsx'
@@ -15,7 +15,10 @@ function App() {
  
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/orderOnline" element={<OrderOnline/>} />
+          <Route path="/orderOnline">
+            <Route path="/orderOnline" element={<Navigate to="/orderOnline/ChooseLocation" replace />} />
+          <Route path=":locationId" element={<OrderOnline />} />
+        </Route>
       <Route path="/locations" element={<Locations/>} />
     </Routes>
  
