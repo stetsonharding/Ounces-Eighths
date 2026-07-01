@@ -2,18 +2,24 @@ import React, { useState } from "react";
 import "../css/LocationMenuSwitcher.css"
 
 const LOCATIONS = [
+    {
+    id: "choose locaiton",
+    name: "Choose Location",
+    label: "Choose Your Location",
+    menuUrl: "",
+  },
   {
     id: "monroe",
     name: "Monroe",
     label: "Ounces & Eighths - Monroe",
     menuUrl: "https://selection.thekushery.rocks/orderOnline/monroe/menu",
   },
-  // {
-  //   id: "lynnwood",
-  //   name: "Lynnwood",
-  //   label: "Ounces & Eighths - Lynnwood",
-  //   menuUrl: "https://your-lynnwood-menu-link.com",
-  // },
+  {
+    id: "lynnwood",
+    name: "Lynnwood",
+    label: "Ounces & Eighths - Lynnwood",
+    menuUrl: "https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu",
+  },
 ];
 
 const LocationMenuSwitcher = () => {

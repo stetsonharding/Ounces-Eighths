@@ -31,11 +31,11 @@ const LOCATIONS = [
   },
   {
     id: "lynnwood",
-    name: "Lynnwood (Coming soon)",
+    name: "Lynnwood",
     tagline: "Skip the line - Order Online.",
     address1: "7531 196th St SW",
     address2: "Lynnwood WA 98036",
-    phone: "(000) 000-0000",
+    phone: "(425) 921-6844",
 
     hours: [
       { days: "Monday - Sunday", time: "8AM - 10PM" },
@@ -45,9 +45,9 @@ const LOCATIONS = [
      comingSoon,
 
     mapsUrl:
-      "",
+      "https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu",
 
-    orderUrl: "/orderOnline"
+    orderUrl: "https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu"
   },
 
 ];
