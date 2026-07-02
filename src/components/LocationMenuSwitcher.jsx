@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import "../css/LocationMenuSwitcher.css"
 
 const LOCATIONS = [
+  //   {
+  //   id: "choose locaiton",
+  //   name: "Choose Location",
+  //   label: "Choose Your Location",
+  //   menuUrl: "",
+  // },
   {
     id: "monroe",
     name: "Monroe",
@@ -12,7 +18,7 @@ const LOCATIONS = [
   //   id: "lynnwood",
   //   name: "Lynnwood",
   //   label: "Ounces & Eighths - Lynnwood",
-  //   menuUrl: "https://your-lynnwood-menu-link.com",
+  //   menuUrl: "https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu",
   // },
 ];
 

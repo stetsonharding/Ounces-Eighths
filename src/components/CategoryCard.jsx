@@ -11,7 +11,7 @@ import Deals from "../assets/products/deals.png"
 
 const STORES = [
   { id: "monroe", label: "Monroe", address: "16412 Trombley Rd" },
-  // { id: "lynnwood", label: "Lynnwood", address: "7531 196th St SW" },
+  //  { id: "lynnwood", label: "Lynnwood", address: "7531 196th St SW" },
 ];
 
 const CATEGORIES = [
@@ -49,11 +49,20 @@ export default function CategoryCard() {
   const goToCategory = (catKey) => {
     if (isSwitching) return;
 
+   if(storeId === "monroe"){
+
      window.open(
   `https://selection.thekushery.rocks/orderOnline/${storeId}/menu/${catKey}`,
   "_blank",
   "noopener,noreferrer"
 );
+   }else{
+  //  window.open(
+  // `https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu`,
+  // "_blank",
+  // "noopener,noreferrer"
+  //  )
+   }
 
     console.log(storeId, catKey);
   };
