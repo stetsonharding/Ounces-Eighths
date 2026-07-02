@@ -61,7 +61,7 @@ const LocationCard = ({ location }) => {
 
         <div className="loc-buttons">
 
-          {location.mapsUrl ? <Button
+          {location.name === "Monroe" ? <Button
             className="btn-green"
             href={location.orderUrl}
             target="_blank"
