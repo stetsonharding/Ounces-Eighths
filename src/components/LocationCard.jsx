@@ -17,7 +17,7 @@ const LocationCard = ({ location }) => {
 
       <Card.Body className="loc-card-body">
 
-        <h2 className="loc-title">{location.name}</h2>
+        <h2 className="loc-title">{location.name} {location.name === "Lynnwood" ? " - NOW OPEN!" : null}</h2>
         <p className="loc-tagline">{location.tagline}</p>
 
         <div className="loc-info">
@@ -67,7 +67,7 @@ const LocationCard = ({ location }) => {
             target="_blank"
           >
             Order Online
-          </Button> : null}
+          </Button> : <button className="btn-green">Online Ordering Coming Soon</button>}
 
 
           <Button

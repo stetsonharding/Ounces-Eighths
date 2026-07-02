@@ -5,7 +5,8 @@ import Ounces_Eighths_Monroe from "../assets/Ounces_Eighths_Monroe.png"
 
 import LocationsContainer from '../components/LocationsContainer';
 import Footer from '../components/Footer';
-import comingSoon from "../assets/comingSoon.jpg"
+import comingSoon from "../assets/comingSoon.jpg";
+import now_open from "../assets/now_open.jpg"
 
 const LOCATIONS = [
   {
@@ -42,12 +43,12 @@ const LOCATIONS = [
     ],
 
     image:
-     comingSoon,
+     now_open,
 
     mapsUrl:
-      "https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu",
+      "",
 
-    orderUrl: "https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu"
+    orderUrl: ""
   },
 
 ];

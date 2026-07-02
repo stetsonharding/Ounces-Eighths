@@ -10,7 +10,7 @@ const OrderOnlinePickups = ({ location, address, city, menuLink, mapSrc }) => {
 
 
     <div className="pickup-card">
-      {menuLink ? <h1 className="title">Skip the line - Order Online.</h1> : <h1 className="title">COMING SOON</h1> }
+      {menuLink ? <h1 className="title">Skip the line - Order Online.</h1> : <h1 className="title">NOW OPEN!</h1> }
       <h2 className="subtitle">{location} Location</h2>
 
 
@@ -37,7 +37,7 @@ const OrderOnlinePickups = ({ location, address, city, menuLink, mapSrc }) => {
         className="shop-btn"
       >
         Shop {location} Now
-      </a> :   null }
+      </a> :  <a className="shop-btn">Online Ordering Coming Soon</a> }
     
     </div>
 
