@@ -27,7 +27,7 @@ export default function Footer({
             </div>
             <ul className="siteFooter__list">
              <li><a className="siteFooter__link" href="https://selection.thekushery.rocks/orderOnline/monroe/menu">Monroe - Menu</a></li>
-             <li><a className="siteFooter__link" href="">Lynnwood - Menu (Coming Soon)</a></li>
+             <li><a className="siteFooter__link" href="https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu/all">Lynnwood - Menu</a></li>
             </ul>
           </div>
 
