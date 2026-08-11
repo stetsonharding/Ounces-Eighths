@@ -14,12 +14,12 @@ const LOCATIONS = [
     label: "Ounces & Eighths - Monroe",
     menuUrl: "https://selection.thekushery.rocks/orderOnline/monroe/menu",
   },
-  // {
-  //   id: "lynnwood",
-  //   name: "Lynnwood",
-  //   label: "Ounces & Eighths - Lynnwood",
-  //   menuUrl: "https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu",
-  // },
+  {
+    id: "lynnwood",
+    name: "Lynnwood",
+    label: "Ounces & Eighths - Lynnwood",
+    menuUrl: "https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu",
+  },
 ];
 
 const LocationMenuSwitcher = () => {

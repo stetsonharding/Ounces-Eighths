@@ -11,18 +11,18 @@ import Deals from "../assets/products/deals.png"
 
 const STORES = [
   { id: "monroe", label: "Monroe", address: "16412 Trombley Rd" },
-  //  { id: "lynnwood", label: "Lynnwood", address: "7531 196th St SW" },
+   { id: "lynnwood", label: "Lynnwood", address: "7531 196th St SW" },
 ];
 
 const CATEGORIES = [
   { key: "flower", label: "Flower", img: Flower },
-  { key: "pre-roll", label: "Pre-Roll", img: preRoll },
-  { key: "edible", label: "Edibles", img: Edibles },
   { key: "extract", label: "Extract", img: Concentrates },
-  { key: "tincture", label: "Tinctures", img: Tinctures },
-  { key: "topical", label: "Topicals", img: Topicals },
+  { key: "edible", label: "Edibles", img: Edibles },
   { key: "vape", label: "Vape", img: Vape },
-  { key: "deals", label: "Deals", img: Deals }
+  { key: "topical", label: "Topicals", img: Topicals },
+  { key: "tincture", label: "Tinctures", img: Tinctures },
+  { key: "pre-roll", label: "Pre-Roll", img: preRoll },
+  { key: "all", label: "All Prodcuts", img: Deals }
 
 
 ];
@@ -57,11 +57,11 @@ export default function CategoryCard() {
   "noopener,noreferrer"
 );
    }else{
-  //  window.open(
-  // `https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu`,
-  // "_blank",
-  // "noopener,noreferrer"
-  //  )
+   window.open(
+  `https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu/${catKey}`,
+  "_blank",
+  "noopener,noreferrer"
+   )
    }
 
     console.log(storeId, catKey);

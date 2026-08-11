@@ -61,14 +61,13 @@ const LocationCard = ({ location }) => {
 
         <div className="loc-buttons">
 
-          {location.name === "Monroe" ? <Button
+          <Button
             className="btn-green"
             href={location.orderUrl}
             target="_blank"
           >
             Order Online
-          </Button> : <button className="btn-green">Online Ordering Coming Soon</button>}
-
+          </Button> 
 
           <Button
             className="btn-outline"

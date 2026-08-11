@@ -48,7 +48,7 @@ const LOCATIONS = [
     mapsUrl:
       "https://www.google.com/maps/dir//Ounces+%26+Eighths+%7C+Marijuana+%7C+Pot+%7C+Weed,+7531+196th+St+SW,+Lynnwood,+WA+98036/@47.9477569,-122.2068299,5472m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x54901b6804487c93:0x8fdcf45c395a20ec!2m2!1d-122.3354457!2d47.8217181?hl=en&authuser=0&entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
 
-    orderUrl: ""
+    orderUrl: "https://selection.ouncesandeighths.com/orderOnline/lynnwood/menu/all"
   },
 
 ];
